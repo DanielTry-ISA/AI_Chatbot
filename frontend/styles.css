@@ -12,7 +12,7 @@ body{
     background: #0f1f46;
     /* Evita scroll horizontal */
     overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 /* Contenedor con fondo animado */
@@ -37,13 +37,13 @@ body{
     display: flex;
     /* Organiza elementos verticalmente */
     flex-direction: column;
-    /* centra verticalmente */
-    justify-content: flex-start;
+    
     /* centrar horizontalmente */
     align-items: center;
     color: rgb(74, 76, 190);
     /* Centrado de texto */
     text-align: center;
+    padding-top: 20px;
 }
 
 h1{
@@ -52,4 +52,91 @@ h1{
     /* espacio bajo el título */
     margin-bottom: 20px;
 }
-/* Usar este color para texto de abajo rgb(60, 61, 100) */
+
+/* Contenedor del input */
+.chat-input{
+    width: 1400px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* Revisar este color */
+    background: rgb(60, 61, 100);
+    border: 1px solid #444;
+    border-radius: 30px;
+    padding: 12px 16px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    gap: 10px;
+    box-sizing: border-box;
+
+}
+
+.chat-input input {
+
+  /* ocupa todo el espacio disponible */
+  flex: 1;
+
+  /* fondo transparente */
+  background: transparent;
+
+  justify-content: flex-start;
+
+  /* quita borde del input */
+  border: none;
+
+  /* quita borde azul al hacer click */
+  outline: none;
+
+  /* color del texto */
+  color: rgb(156, 154, 154);
+
+  /* tamaño de letra */
+  font-size: 16px;
+  height: 100%; /* Ocupa la altura del contenedor padre */
+  padding: 0; /* Elimina paddings nativos que desalinean el texto */
+  line-height: 1; /* Normaliza la altura de línea del navegador */
+}
+
+
+
+
+.btn-send {
+
+  /* fondo blanco */
+  background: rgb(43, 43, 71);
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  transform: scale(0.95);
+  border-radius: 50%;
+
+  /* texto negro */
+  color: rgba(132, 132, 134, 0.836);
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+/* ===== BOTÓN PLUS ===== */
+.btn-plus {
+
+  /* fondo transparente */
+  background: rgb(43, 43, 71);
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  transform: scale(0.95);
+  border-radius: 50%;
+
+  /* color del símbolo + */
+  color: white;
+
+  /* borde gris */
+  border: 1px solid #555;
+}
