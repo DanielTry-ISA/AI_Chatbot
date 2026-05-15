@@ -29,6 +29,20 @@ async def root():
     return {"message": "api funciona!"}
 
 
+test_message = input("Write anything")
+response = Client.chat.completions.create(model = model,
+                                           messages = [{"role": "user", "content": test_message}],
+                                          temperature=0.1,
+                                          max_tokens = 800)
+
+print(response.choices[0].message.content)
+
+
+@app.route("/chat", methods = ["POST"])
+def chat():
+    pass
+
+
 
 
 
